@@ -8,23 +8,29 @@
 (require 'typescript-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
+
 ;; Haskell
 (defun my-haskell-hook ()
   (progn
-    (turn-on-haskell-doc-mode)
-    (turn-on-haskell-indentation)))
+    (interactive-haskell-mode)
+    (haskell-doc-mode)
+    (haskell-indentation-mode)))
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 
-(eval-after-load "haskell-mode"
-  '(progn
-     (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-     (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-     (define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
-     (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
-     (define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-     (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+;; Start Haskell Interactive mode without prompts
+;;
+;;(eval-after-load "haskell-mode"
+;;  '(progn
 
+
+;;     (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+;;     (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+;;     (define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
+;;     (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
+;;     (define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+;;     (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+;;
 ;; Text Mode
 (defun my-random-text-hook ()
   (local-set-key "\C-c\C-t" 'insert-typing-judgement)

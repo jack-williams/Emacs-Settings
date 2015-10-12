@@ -29,14 +29,15 @@
         when (not (package-installed-p p)) do (return nil)
         finally (return t)))
 
-(unless (prelude-packages-installed-p)
-  ;; check for new packages (package versions)
-  (message "%s" "Emacs Prelude is now refreshing its package database...")
-  (package-refresh-contents)
-  (message "%s" " done.")
-  ;; install the missing packages
-  (dolist (p prelude-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
+(if (version<= "24.0" emacs-version)
+    (unless (prelude-packages-installed-p)
+      ;; check for new packages (package versions)
+      (message "%s" "Emacs Prelude is now refreshing its package database...")
+      (package-refresh-contents)
+      (message "%s" " done.")
+      ;; install the missing packages
+      (dolist (p prelude-packages)
+        (when (not (package-installed-p p))
+          (package-install p)))))
 
 (provide 'package-init)

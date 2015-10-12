@@ -27,7 +27,8 @@
 
 ;;; Modeline
 (customize-set-value 'display-time-default-load-average nil)
-(display-time-mode)
+(setq solarized-high-contrast-mode-line t)
+(setq solarized-distinct-fringe-background t)
 
 ;; Backup configuration
 (setq backup-by-copying t
