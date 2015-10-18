@@ -51,9 +51,21 @@
 	try-expand-line))
 
 ;; Org
-(customize-set-value 'org-agenda-files '("~/org"))
+(customize-set-value 'org-agenda-files '("~/org" "~/org/journal/"))
+;;(customize-set-value 'org-agenda-file-regexp "\\`[^.].*\\.org'\\|[0-9]+")
 (customize-set-value 'calendar-mark-diary-entries-flag t)
-(customize-set-value 'org-latex-packages-alist (quote (("" "amssymb" nil) ("" "asmath" nil))))
+(customize-set-value
+ 'org-latex-packages-alist
+ (quote (("" "amssymb" nil) ("" "asmath" nil))))
+
+
+;;(customize-set-value 'org-directory "~/org")
+(customize-set-value 'org-journal-dir "~/org/journal/")
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n")))
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
 
 ;; System Local Config
 ;; -- OSX --
