@@ -28,7 +28,7 @@
  '(fci-rule-color "#e9e2cb")
  '(org-agenda-files
    (quote
-    ("/Users/jackw/org/diary.org" "/Users/jackw/org/gtd.org" "/Users/jackw/org/personal.org" "/Users/jackw/org/work.org" "/Users/jackw/org/journal/20151013" "/Users/jackw/org/journal/20151014" "/Users/jackw/org/journal/20151015" "/Users/jackw/org/journal/20151020")))
+    ("/Users/jackw/org/diary.org" "/Users/jackw/org/gtd.org" "/Users/jackw/org/personal.org" "/Users/jackw/org/work.org")))
  '(typescript-indent-level 2)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
