@@ -21,6 +21,8 @@
     powerline
     typescript-mode
     magit
+    solarized-theme
+    helm-swoop
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
