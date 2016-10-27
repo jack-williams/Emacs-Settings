@@ -10,8 +10,8 @@
 ;; Dvorak friendly keymappings.
 (keyboard-translate ?\C-z ?\C-x)
 (keyboard-translate ?\C-x ?\C-z)
+;; (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-h") 'previous-line)
-(global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 ;; Ace Jump
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)

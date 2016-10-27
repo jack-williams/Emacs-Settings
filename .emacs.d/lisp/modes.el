@@ -10,6 +10,7 @@
 
 
 ;; Haskell
+(custom-set-variables '(haskell-process-type 'stack-ghci))
 (defun my-haskell-hook ()
   (progn
     (interactive-haskell-mode)
@@ -52,3 +53,5 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-j") 'helm-select-action)
+(global-set-key (kbd "C-x C-m") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
