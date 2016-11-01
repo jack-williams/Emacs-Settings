@@ -21,6 +21,8 @@
     powerline
     typescript-mode
     magit
+    ivy
+    counsel
     solarized-theme
     helm-swoop
     zenburn-theme)
