@@ -22,4 +22,4 @@ directory to make multiple eshell windows easier."
     (eshell-send-input)))
 (global-set-key (kbd "C-!") 'eshell-here)
 
-(provide 'utils)
+(provide 'jw-utils)
