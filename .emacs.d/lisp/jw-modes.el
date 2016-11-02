@@ -23,8 +23,9 @@
 
 ;; Text Mode
 (defun my-random-text-hook ()
+  (require 'rules)
   (local-set-key "\C-c\C-t" 'insert-typing-judgement)
-  (local-set-key "\C-c\C-r" 'rules-center-this-infrule))
+  (local-set-key "\C-cr" 'rules-center-this-infrule))
 
 (add-hook 'text-mode-hook 'my-random-text-hook)
 

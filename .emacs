@@ -5,8 +5,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;; Run the initialisation files.
-(require 'rules)
-
 (require 'jw-package-init)
 (require 'jw-keys)
 (require 'jw-modes)
