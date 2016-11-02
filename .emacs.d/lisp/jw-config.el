@@ -77,4 +77,4 @@
             "/Applications/CoqIDE_8.4pl5.app/Contents/Resources/bin/coqtop")))
 
 
-(provide 'config)
+(provide 'jw-config)

@@ -68,4 +68,4 @@
    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
    ))
 
-(provide 'modes)
+(provide 'jw-modes)

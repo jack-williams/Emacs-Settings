@@ -43,4 +43,4 @@
         (when (not (package-installed-p p))
           (package-install p)))))
 
-(provide 'package-init)
+(provide 'jw-package-init)
