@@ -12,7 +12,7 @@
 (use-package haskell-mode
   :mode "\\.hs\\'"
   :config
-  (setq haskell-mode 'stack-ghci)
+  (setq haskell-process-type 'stack-ghci)
   (defun my-haskell-hook ()
     (progn
       (interactive-haskell-mode)
