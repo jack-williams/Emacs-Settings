@@ -49,23 +49,6 @@
 	try-expand-list
 	try-expand-line))
 
-;; Org
-(customize-set-value 'org-agenda-files '("~/org"))
-;;(customize-set-value 'org-agenda-file-regexp "\\`[^.].*\\.org'\\|[0-9]+")
-(customize-set-value 'calendar-mark-diary-entries-flag t)
-
-(customize-set-value 'org-directory "~/org")
-(setq org-capture-templates
-      '(("t" "TODO" entry (file+headline "~/org/gtd.org" "Tasks")
-         "* TODO %?\n  %i\n")))
-(define-key global-map "\C-cc" 'org-capture)
-(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
-(org-toggle-sticky-agenda 1)
-
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(define-key global-map "\C-cb" 'org-iswitchb)
-
 ;; System Local Config
 ;; -- OSX --
 (if (eq system-type 'darwin)
