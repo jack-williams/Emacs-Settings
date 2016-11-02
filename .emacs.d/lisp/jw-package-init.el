@@ -14,9 +14,9 @@
    t))
 
 (defvar prelude-packages
-  '(ace-jump-mode
+  '(use-package
+    ace-jump-mode
     auctex
-    helm
     haskell-mode
     powerline
     typescript-mode
@@ -24,7 +24,6 @@
     ivy
     counsel
     solarized-theme
-    helm-swoop
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
