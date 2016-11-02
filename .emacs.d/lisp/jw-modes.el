@@ -8,16 +8,18 @@
 (require 'typescript-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
-
 ;; Haskell
-(custom-set-variables '(haskell-process-type 'stack-ghci))
-(defun my-haskell-hook ()
-  (progn
-    (interactive-haskell-mode)
-    (haskell-doc-mode)
-    (haskell-indentation-mode)))
+(use-package haskell-mode
+  :mode "\\.hs\\'"
+  :config
+  (setq haskell-mode 'stack-ghci)
+  (defun my-haskell-hook ()
+    (progn
+      (interactive-haskell-mode)
+      (haskell-doc-mode)
+      (haskell-indentation-mode)))
+  (add-hook 'haskell-mode-hook 'my-haskell-hook))
 
-(add-hook 'haskell-mode-hook 'my-haskell-hook)
 
 ;; Text Mode
 (defun my-random-text-hook ()
@@ -25,22 +27,6 @@
   (local-set-key "\C-c\C-r" 'rules-center-this-infrule))
 
 (add-hook 'text-mode-hook 'my-random-text-hook)
-
-;; HELM
-;; (require 'helm-config)
-;; (require 'helm-swoop)
-;; (helm-mode t)
-;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
-;; (global-set-key (kbd "C-x b") 'helm-mini)
-;; (define-key helm-map (kbd "C-h") 'helm-previous-line)
-;; (define-key helm-find-files-map (kbd "C-h") 'helm-previous-line)
-;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-;; (setq helm-buffers-fuzzy-matching t)
-;; (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-;; (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
-;; (define-key helm-map (kbd "C-j") 'helm-select-action)
-;; (global-set-key (kbd "C-x C-m") 'helm-M-x)
-;; (global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Ivy Mode
 (use-package ivy
