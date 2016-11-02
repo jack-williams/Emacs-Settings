@@ -12,6 +12,7 @@
 (keyboard-translate ?\C-x ?\C-z)
 ;; (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-h") 'previous-line)
+(define-key Buffer-menu-mode-map (kbd "h") 'previous-line)
 
 ;; Ace Jump
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
