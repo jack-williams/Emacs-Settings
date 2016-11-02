@@ -5,13 +5,14 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;; Run the initialisation files.
-(require 'package-init)
-(require 'keys)
-(require 'modes)
 (require 'rules)
+
+(require 'jw-package-init)
+(require 'jw-keys)
+(require 'jw-modes)
 (require 'jw-themes)
-(require 'utils)
-(require 'config)
+(require 'jw-utils)
+(require 'jw-config)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
