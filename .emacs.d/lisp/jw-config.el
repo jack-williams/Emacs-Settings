@@ -29,6 +29,10 @@
 (setq solarized-high-contrast-mode-line t)
 (setq solarized-distinct-fringe-background t)
 
+;; Ace Window
+(require 'ace-window)
+(global-set-key (kbd "M-p") 'ace-window)
+
 ;; Backup configuration
 (setq backup-by-copying t
       backup-directory-alist
