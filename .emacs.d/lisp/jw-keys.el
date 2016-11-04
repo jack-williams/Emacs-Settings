@@ -15,7 +15,7 @@
 (define-key Buffer-menu-mode-map (kbd "h") 'previous-line)
 
 ;; Avy
-(define-key global-map (kbd "C-c :") 'avy-goto-char)
+(define-key global-map (kbd "C-c SPC") 'avy-goto-char)
 
 camelTest
 
