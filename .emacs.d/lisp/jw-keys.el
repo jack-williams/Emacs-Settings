@@ -14,8 +14,10 @@
 (global-set-key (kbd "C-h") 'previous-line)
 (define-key Buffer-menu-mode-map (kbd "h") 'previous-line)
 
-;; Ace Jump
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+;; Avy
+(define-key global-map (kbd "C-c :") 'avy-goto-char)
+
+camelTest
 
 ;; OSX
 (setq mac-option-key-is-meta nil)
