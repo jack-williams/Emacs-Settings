@@ -17,8 +17,6 @@
 ;; Avy
 (define-key global-map (kbd "C-c SPC") 'avy-goto-char)
 
-camelTest
-
 ;; OSX
 (setq mac-option-key-is-meta nil)
 (setq mac-command-key-is-meta t)
