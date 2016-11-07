@@ -16,6 +16,8 @@
 (setq-default indent-tabs-mode nil)
 (show-paren-mode)
 (customize-set-value 'fill-column 80)
+(setq initial-major-mode 'org-mode)
+(setq initial-scratch-message "* Notes")
 
 ;; Powerline
 (powerline-default-theme)
