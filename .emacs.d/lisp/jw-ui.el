@@ -15,6 +15,7 @@
 (customize-set-value 'moe-theme-mode-line-color 'w/b)
 (customize-set-value 'powerline-display-buffer-size nil) 
 (customize-set-value 'powerline-display-mule-info nil)
+(customize-set-value 'powerline-display-hud nil)
 
 ;;; Modeline
 (customize-set-value 'display-time-default-load-average nil)
