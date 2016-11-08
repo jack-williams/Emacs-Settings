@@ -9,7 +9,7 @@
 (require 'jw-keys)
 (require 'jw-modes)
 (require 'jw-config)
-(require 'jw-themes)
+(require 'jw-ui)
 (require 'jw-utils)
 (require 'jw-org)
 (custom-set-variables
