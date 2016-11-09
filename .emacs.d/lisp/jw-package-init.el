@@ -23,7 +23,6 @@
     magit
     ivy
     counsel
-    solarized-theme
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
