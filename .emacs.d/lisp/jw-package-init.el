@@ -20,6 +20,7 @@
     haskell-mode
     powerline
     typescript-mode
+    flycheck
     magit
     ivy
     counsel

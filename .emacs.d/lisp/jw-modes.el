@@ -37,7 +37,7 @@
     (setq ivy-use-virtual-buffers t)
     (setq ivy-use-virtual-buffers t)
     (setq ivy-re-builders-alist
-          '((t . ivy--regex-fuzzy)))
+          '((t . ivy--regex-plus)))
     (setq ivy-initial-inputs-alist nil)
     (global-set-key "\C-s" 'swiper)
     (global-set-key (kbd "C-c C-r") 'ivy-resume)
