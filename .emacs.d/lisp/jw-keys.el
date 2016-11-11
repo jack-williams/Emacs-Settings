@@ -10,6 +10,7 @@
 ;; Dvorak friendly keymappings.
 (keyboard-translate ?\C-z ?\C-x)
 (keyboard-translate ?\C-x ?\C-z)
+;; This has been replaced with counsel-M-x
 ;; (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-h") 'previous-line)
 (define-key Buffer-menu-mode-map (kbd "h") 'previous-line)
