@@ -11,6 +11,8 @@
 (customize-set-value 'org-directory jw-org-dir)
 (customize-set-value 'org-agenda-diary-file jw-org-diary-file)
 (customize-set-value 'org-agenda-files `(,jw-org-dir))
+(customize-set-value 'org-use-tag-inheritance nil)
+
 
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
 (setq org-capture-templates
