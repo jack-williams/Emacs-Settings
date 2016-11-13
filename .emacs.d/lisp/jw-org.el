@@ -26,7 +26,11 @@
     ;;; Small
    ;; ► • ★ ▸
    ))
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(add-hook 'org-mode-hook
+          (lambda ()
+            (progn
+              (org-indent-mode 1)
+              (org-bullets-mode 1))))
 
 
 
