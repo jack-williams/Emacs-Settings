@@ -13,6 +13,22 @@
 (customize-set-value 'org-agenda-files `(,jw-org-dir))
 (customize-set-value 'org-use-tag-inheritance nil)
 
+(require 'org-bullets)
+(customize-set-value
+ 'org-bullets-bullet-list
+ '(;;; Large
+   "●"
+   "●"
+   "○"
+   "○"
+   "○"
+   ;; ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
+    ;;; Small
+   ;; ► • ★ ▸
+   ))
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+
 
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
 (setq org-capture-templates
