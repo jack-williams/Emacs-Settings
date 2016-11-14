@@ -7,8 +7,6 @@
 
 (require 'cl)
 
-(package-initialize)
-
 (when (>= emacs-major-version 24)
   (add-to-list
    'package-archives
