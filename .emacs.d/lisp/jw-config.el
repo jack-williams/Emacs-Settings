@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; General Configuration and Preferences
+1;; General Configuration and Preferences
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -13,7 +13,10 @@
 (show-paren-mode)
 (customize-set-value 'fill-column 80)
 (setq initial-major-mode 'org-mode)
-(setq initial-scratch-message "* Notes")
+(setq initial-scratch-message
+      (concat "* Notes "
+              (format-time-string "%d/%m/%y")))
+
 
 
 
