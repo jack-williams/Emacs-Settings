@@ -17,7 +17,7 @@
 
 ;; Avy
 (define-key global-map (kbd "C-c SPC") 'avy-goto-char)
-(global-set-key (kbd "M-p") 'ace-window)
+(global-set-key (kbd "C-x o") 'ace-window)
 
 ;; OSX
 (setq mac-option-key-is-meta nil)
