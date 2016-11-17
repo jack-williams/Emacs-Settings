@@ -10,7 +10,7 @@
 (scroll-bar-mode -1)
 
 ;; Add this since I've hidden menu bar on OSX
-(display-time-modet)
+(display-time-mode t)
 
 ;; Powerline
 (powerline-default-theme)
