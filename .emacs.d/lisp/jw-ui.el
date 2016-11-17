@@ -9,6 +9,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Add this since I've hidden menu bar on OSX
+(display-time-modet)
+
 ;; Powerline
 (powerline-default-theme)
 (customize-set-value 'powerline-default-separator 'utf-8)
