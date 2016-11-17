@@ -30,6 +30,7 @@
           (lambda ()
             (progn
               (org-indent-mode 1)
+              (flyspell-mode)
               (org-bullets-mode 1))))
 
 
