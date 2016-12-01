@@ -57,6 +57,24 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
 
+;; LaTeX Config
+(setq reftex-plug-into-AUCTeX t)
+(setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
+(setq TeX-view-program-list
+      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -r -b -g %n %o %b")))
+
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (progn
+              (reftex-mode t)
+              (push
+               '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
+                 :help "Run latexmk on file")
+               TeX-command-list))))
+
+(add-hook 'TeX-mode-hook
+          '(lambda ()
+             (setq TeX-command-default "latexmk")))
 
 
 (provide 'jw-modes)
