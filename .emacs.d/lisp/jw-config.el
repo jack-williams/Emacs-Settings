@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-1;; General Configuration and Preferences
+;; General Configuration and Preferences
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -16,9 +16,6 @@
 (setq initial-scratch-message
       (concat "* Notes "
               (format-time-string "%d/%m/%y")))
-
-
-
 
 ;; Backup configuration
 (setq backup-by-copying t
