@@ -6,7 +6,6 @@
 (require 'org)
 
 (defvar jw-org-dir "~/org")
-(defvar jw-notes-dir "~/notes")
 (defvar jw-org-diary-file (concat jw-org-dir "diary.org"))
 
 (defun sa-find-org-file-recursively (&optional directory filext)
@@ -32,9 +31,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
 
 (customize-set-value 'org-directory jw-org-dir)
 (customize-set-value 'org-agenda-diary-file jw-org-diary-file)
-(customize-set-value 'org-agenda-files
-                     (append (sa-find-org-file-recursively jw-org-dir)
-                             (sa-find-org-file-recursively jw-notes-dir)))
+(customize-set-value 'org-agenda-files `(,jw-org-dir))
+
 (customize-set-value 'org-use-tag-inheritance nil)
 
 (require 'org-bullets)
