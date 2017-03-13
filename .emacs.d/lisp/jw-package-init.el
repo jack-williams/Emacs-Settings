@@ -6,6 +6,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'cl)
+(require 'package)
+
+(package-initialize)
 
 (when (>= emacs-major-version 24)
   (add-to-list
