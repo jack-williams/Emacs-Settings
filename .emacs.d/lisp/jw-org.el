@@ -5,7 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'org)
 
-(defvar jw-org-dir "~/org")
+(defvar jw-org-dir "~/org/")
 (defvar jw-org-diary-file (concat jw-org-dir "diary.org"))
 
 (defun sa-find-org-file-recursively (&optional directory filext)
