@@ -22,6 +22,12 @@
       (haskell-indentation-mode)))
   (add-hook 'haskell-mode-hook 'my-haskell-hook))
 
+;; F#
+(use-package fsharp-mode
+  :mode "\\.fs\\'"
+  :config
+  (setq fsharp-indent-offset 2))
+
 
 ;; Text Mode
 (defun my-random-text-hook ()
