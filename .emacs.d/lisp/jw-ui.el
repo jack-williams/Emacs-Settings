@@ -24,6 +24,7 @@
 (customize-set-value 'display-time-default-load-average nil)
 (setq solarized-high-contrast-mode-line t)
 (setq solarized-distinct-fringe-background t)
+(setq x-underline-at-descent-line t)
 
 (load-theme 'solarized-dark t)
 
