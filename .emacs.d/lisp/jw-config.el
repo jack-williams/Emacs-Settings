@@ -43,7 +43,7 @@
     (progn
       (add-to-list
        'default-frame-alist
-       '(font . "-*-Source Code Pro for Powerline-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+       '(font . "-*-Office Code Pro-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1"))
       (setq coq-prog-name
             "/Applications/CoqIDE_8.4pl5.app/Contents/Resources/bin/coqtop")))
 
