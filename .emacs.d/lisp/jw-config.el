@@ -10,7 +10,10 @@
 (customize-set-value 'inhibit-splash-screen t)
 (customize-set-value 'inhibit-startup-message t)
 (setq-default indent-tabs-mode nil)
+
+;; Parens
 (show-paren-mode)
+(smartparens-global-mode)
 (customize-set-value 'fill-column 80)
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message
