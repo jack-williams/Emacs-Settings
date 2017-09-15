@@ -25,8 +25,7 @@
 (setq solarized-high-contrast-mode-line t)
 (setq solarized-distinct-fringe-background t)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/emacs-color-theme-solarized")
-(load-theme 'solarized t)
+(load-theme 'solarized-dark t)
 
 
 (provide 'jw-ui)
