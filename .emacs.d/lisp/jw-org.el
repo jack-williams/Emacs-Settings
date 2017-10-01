@@ -72,4 +72,12 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cb" 'org-iswitchb)
 
+;; set sizes here to stop spacemacs theme resizing these
+(set-face-attribute 'org-level-1 nil :height 1.0)
+(set-face-attribute 'org-level-2 nil :height 1.0)
+(set-face-attribute 'org-level-3 nil :height 1.0)
+(set-face-attribute 'org-scheduled-today nil :height 1.0)
+(set-face-attribute 'org-agenda-date-today nil :height 1.1)
+(set-face-attribute 'org-table nil :foreground "#008787")
+
 (provide 'jw-org)

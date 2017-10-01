@@ -12,21 +12,19 @@
 ;; Add this since I've hidden menu bar on OSX
 (display-time-mode t)
 
-;; Powerline
-(powerline-default-theme)
-(customize-set-value 'powerline-default-separator 'utf-8)
-(customize-set-value 'moe-theme-mode-line-color 'w/b)
-(customize-set-value 'powerline-display-buffer-size nil) 
-(customize-set-value 'powerline-display-mule-info nil)
-(customize-set-value 'powerline-display-hud nil)
+(use-package spacemacs-theme
+  :ensure t
+  :init
+  (load-theme 'spacemacs-dark t)
+  (setq spacemacs-theme-org-agenda-height nil)
+  (setq spacemacs-theme-org-height nil))
 
-;;; Modeline
-(customize-set-value 'display-time-default-load-average nil)
-(setq solarized-high-contrast-mode-line t)
-(setq solarized-distinct-fringe-background t)
-(setq x-underline-at-descent-line t)
-
-(load-theme 'solarized-dark t)
-
+(use-package spaceline
+  :demand t
+  :init
+  (setq powerline-default-separator 'arrow-fade)
+  :config
+  (require 'spaceline-config)
+  (spaceline-spacemacs-theme))
 
 (provide 'jw-ui)
