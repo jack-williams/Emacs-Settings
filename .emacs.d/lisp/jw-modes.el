@@ -39,6 +39,7 @@
 
 ;; Ivy Mode
 (use-package ivy
+  :diminish ivy-mode
   :config
   (progn
     (ivy-mode 1)
