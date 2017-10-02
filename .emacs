@@ -18,3 +18,4 @@
 (require 'jw-ui)
 (require 'jw-utils)
 (require 'jw-org)
+(require 'jw-hydras)
