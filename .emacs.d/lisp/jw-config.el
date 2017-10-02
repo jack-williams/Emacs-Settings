@@ -51,5 +51,10 @@
       (setq coq-prog-name
             "/Applications/CoqIDE_8.4pl5.app/Contents/Resources/bin/coqtop")))
 
+(use-package yasnippet
+  :diminish yas-minor-mode
+  :ensure t
+  :init (add-hook 'prog-mode-hook #'yas-minor-mode)
+  :config (yas-reload-all))
 
 (provide 'jw-config)
