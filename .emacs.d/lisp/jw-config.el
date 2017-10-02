@@ -13,8 +13,17 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Parens
-(show-paren-mode)
-(smartparens-global-mode)
+(use-package smartparens
+  :ensure t
+  :defer t
+  :diminish smartparens-mode
+  :init (add-hook
+         'prog-mode-hook
+         (lambda ()
+           (require 'smartparens-config)
+           (smartparens-global-mode t)
+           (show-smartparens-global-mode t))))
+
 (customize-set-value 'fill-column 80)
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message
