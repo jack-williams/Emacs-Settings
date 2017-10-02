@@ -1,8 +1,14 @@
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
+(defvar emacs-d
+  (file-name-directory
+   (file-chase-links user-emacs-directory)))
 
-(setq custom-file "~/.emacs.d/custom.el")
+(add-to-list 'load-path (concat emacs-d "lisp"))
+(add-to-list 'load-path (concat emacs-d "site-lisp"))
+
+(setq custom-file (concat emacs-d "custom.el"))
 (load custom-file)
+
+(package-initialize)
 
 ;; Run the initialisation files.
 (require 'jw-package-init)
