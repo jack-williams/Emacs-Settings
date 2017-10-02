@@ -4,13 +4,26 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; TypeScript
-(require 'typescript-mode)
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
-(setq typescript-indent-level 2)
-(setq js-indent-level 2)
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :init
+  (add-hook
+   'typescript-mode-hook
+   (lambda ()
+     (tide-setup)
+     (flycheck-mode +1)
+     (setq flycheck-check-syntax-automatically '(save mode-enabled))
+     (eldoc-mode +1)
+     (tide-hl-identifier-mode +1)
+     (company-mode +1)))
+  (add-hook
+   'before-save-hook
+   'tide-format-before-save)
+  :config
+  (setq typescript-indent-level 2)
+  (setq company-tooltip-align-annotations t)
+  (setq js-indent-level 2))
 
-;; Haskell
 (use-package haskell-mode
   :mode "\\.hs\\'"
   :config
@@ -22,12 +35,10 @@
       (haskell-indentation-mode)))
   (add-hook 'haskell-mode-hook 'my-haskell-hook))
 
-;; F#
 (use-package fsharp-mode
   :mode "\\.fs\\'"
   :config
   (setq fsharp-indent-offset 2))
-
 
 ;; Text Mode
 (defun my-random-text-hook ()
@@ -37,7 +48,6 @@
 
 (add-hook 'text-mode-hook 'my-random-text-hook)
 
-;; Ivy Mode
 (use-package ivy
   :diminish ivy-mode
   :config
