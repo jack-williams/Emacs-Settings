@@ -21,8 +21,8 @@
          'prog-mode-hook
          (lambda ()
            (require 'smartparens-config)
-           (smartparens-global-mode t)
-           (show-smartparens-global-mode t))))
+           (show-paren-mode 1)
+           (smartparens-global-mode t))))
 
 (customize-set-value 'fill-column 80)
 (setq initial-major-mode 'org-mode)

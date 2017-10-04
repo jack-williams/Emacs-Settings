@@ -22,7 +22,7 @@
 (use-package spaceline
   :demand t
   :init
-  (setq powerline-default-separator 'arrow-fade)
+  (setq powerline-default-separator 'arrow)
   :config
   (require 'spaceline-config)
   (spaceline-spacemacs-theme))
