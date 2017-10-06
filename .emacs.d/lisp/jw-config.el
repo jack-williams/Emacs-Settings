@@ -21,7 +21,7 @@
          'prog-mode-hook
          (lambda ()
            (require 'smartparens-config)
-           (show-paren-mode 1)
+           (show-smartparens-global-mode 1)
            (smartparens-global-mode t))))
 
 (customize-set-value 'fill-column 80)
@@ -29,15 +29,6 @@
 (setq initial-scratch-message
       (concat "* Notes "
               (format-time-string "%d/%m/%y")))
-
-;; Backup configuration
-(setq backup-by-copying t
-      backup-directory-alist
-      '(("." . "~/.emacs_backups"))
-      delete-old-versions t
-      kept-new-versions 6
-      kept-old-versions 2
-      version-control t)
 
 ;; Hippie Expand Preferences
 (setq hippie-expand-try-functions-list
@@ -59,6 +50,13 @@
        '(font . "-*-Office Code Pro-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1"))
       (setq coq-prog-name
             "/Applications/CoqIDE_8.4pl5.app/Contents/Resources/bin/coqtop")))
+
+;; -- Windows --
+(if (eq system-type 'windows-nt)
+    (progn
+      (add-to-list
+       'default-frame-alist
+       '(font . "-outline-Consolas-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))))
 
 (use-package yasnippet
   :diminish yas-minor-mode
