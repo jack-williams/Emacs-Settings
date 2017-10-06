@@ -11,6 +11,7 @@
 (customize-set-value 'inhibit-splash-screen t)
 (customize-set-value 'inhibit-startup-message t)
 (setq-default indent-tabs-mode nil)
+(menu-bar-mode -1)
 
 ;; Parens
 (use-package smartparens
@@ -54,6 +55,7 @@
 ;; -- Windows --
 (if (eq system-type 'windows-nt)
     (progn
+      (setq visible-bell 1)
       (add-to-list
        'default-frame-alist
        '(font . "-outline-Consolas-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))))
