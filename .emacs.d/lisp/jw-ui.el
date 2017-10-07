@@ -21,10 +21,9 @@
 
 (use-package spaceline
   :demand t
-  :init
-  (setq powerline-default-separator 'arrow)
   :config
   (require 'spaceline-config)
+  (setq powerline-default-separator 'utf-8)
   (spaceline-spacemacs-theme))
 
 (provide 'jw-ui)
