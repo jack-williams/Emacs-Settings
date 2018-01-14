@@ -12,6 +12,7 @@
 (customize-set-value 'inhibit-startup-message t)
 (setq-default indent-tabs-mode nil)
 (menu-bar-mode -1)
+(customize-set-value 'fill-column 80)
 
 ;; Parens
 (use-package smartparens
@@ -25,7 +26,7 @@
            (show-smartparens-global-mode 1)
            (smartparens-global-mode t))))
 
-(customize-set-value 'fill-column 80)
+;; Start-up Screen
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message
       (concat "* Notes "

@@ -2,7 +2,6 @@
   (interactive)
   (insert "Γ |- "))
 
-
 (defun eshell-here ()
   "Opens up a new shell in the directory associated with the
 current buffer's file. The eshell is renamed to match that

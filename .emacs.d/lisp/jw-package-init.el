@@ -57,10 +57,9 @@ Missing packages are installed automatically."
     (message "%s" "Emacs Prelude is now refreshing its package database...")
     (package-refresh-contents)
     (message "%s" " done.")
-    ;; install the missing packages
+    ;; install missing packages
     (prelude-require-packages prelude-packages)))
 
-;; run package installation
 (prelude-install-packages)
 
 (provide 'jw-package-init)
