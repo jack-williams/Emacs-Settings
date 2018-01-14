@@ -11,7 +11,7 @@
 (defun sa-find-org-file-recursively (&optional directory filext)
   "Return .org and .org_archive files recursively from DIRECTORY.
 If FILEXT is provided, return files with extension FILEXT instead."
-  (interactive "DDirectory: ")
+  (interactive "Directory: ")
   (let* (org-file-list
 	 (case-fold-search t)	      ; filesystems are case sensitive
 	 (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backup files
@@ -35,26 +35,28 @@ If FILEXT is provided, return files with extension FILEXT instead."
 
 (customize-set-value 'org-use-tag-inheritance nil)
 
-(require 'org-bullets)
-(customize-set-value
- 'org-bullets-bullet-list
- '(;;; Large
-   "●"
-   "●"
-   "○"
-   "○"
-   "○"
-   ;; ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
-    ;;; Small
-   ;; ► • ★ ▸
-   ))
-(add-hook 'org-mode-hook
-          (lambda ()
-            (progn
-              (org-indent-mode 1)
-              (flyspell-mode)
-              (org-bullets-mode 1))))
+;;(require 'org-bullets)
+;;(customize-set-value
+;; 'org-bullets-bullet-list
+;; '(;;; Large
+;;   "●"
+;;   "●"
+;;   "○"
+;;   "○"
+;;   "○"
+;;   ;; ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
+;;    ;;; Small
+;;   ;; ► • ★ ▸
+;;   ))
 
+(use-package org-mode
+  :mode "\\.org\\'"
+  :init
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (progn
+                (org-indent-mode 1)
+                (flyspell-mode)))))
 
 
 ;;(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
