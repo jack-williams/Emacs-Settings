@@ -16,15 +16,20 @@
 
 (defvar prelude-packages
   '(use-package
-    auctex
-    haskell-mode
-    powerline
-    typescript-mode
-    flycheck
-    magit
-    ivy
-    avy
-    counsel)
+     ace-window
+     auctex
+     haskell-mode
+     typescript-mode
+     flycheck
+     magit
+     ivy
+     avy
+     counsel
+     hydra
+     spaceline
+     spacemacs-theme
+     smartparens
+     yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
