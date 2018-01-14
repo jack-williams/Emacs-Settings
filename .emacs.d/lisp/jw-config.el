@@ -48,9 +48,7 @@
     (progn
       (add-to-list
        'default-frame-alist
-       '(font . "-*-Office Code Pro-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1"))
-      (setq coq-prog-name
-            "/Applications/CoqIDE_8.4pl5.app/Contents/Resources/bin/coqtop")))
+       '(font . "-*-Office Code Pro-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))))
 
 ;; -- Windows --
 (if (eq system-type 'windows-nt)
