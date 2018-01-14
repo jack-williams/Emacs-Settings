@@ -20,9 +20,9 @@
    'before-save-hook
    'tide-format-before-save)
   :config
-  (setq typescript-indent-level 2)
+  (setq typescript-indent-level 4)
   (setq company-tooltip-align-annotations t)
-  (setq js-indent-level 2))
+  (setq js-indent-level 4))
 
 (use-package haskell-mode
   :mode "\\.hs\\'"
