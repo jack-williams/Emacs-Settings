@@ -90,5 +90,4 @@
           '(lambda ()
              (setq TeX-command-default "latexmk")))
 
-
 (provide 'jw-modes)
