@@ -43,6 +43,9 @@
 	try-expand-list
 	try-expand-line))
 
+;; Backup
+(setq make-backup-files nil)
+
 ;; System Local Config
 ;; -- OSX --
 (if (eq system-type 'darwin)
