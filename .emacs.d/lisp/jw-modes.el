@@ -21,8 +21,10 @@
    'tide-format-before-save)
   :config
   (setq typescript-indent-level 4)
+  (setq typescript-switch-indent-offset typescript-indent-level)
   (setq company-tooltip-align-annotations t)
-  (setq js-indent-level 4))
+  (setq js-indent-level 4)
+  (setq tide-tsserver-executable "~/Developer/TypeScript/built/local/tsserver.js"))
 
 (use-package haskell-mode
   :mode "\\.hs\\'"
@@ -73,9 +75,9 @@
 
 ;; LaTeX Config
 (setq reftex-plug-into-AUCTeX t)
-(setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
+(setq TeX-view-program-selection '((output-pdf "Skim")))
 (setq TeX-view-program-list
-      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -r -b -g %n %o %b")))
+      '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -r -b -b -g %n %o %b")))
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
