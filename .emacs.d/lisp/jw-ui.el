@@ -27,4 +27,9 @@
   (setq powerline-default-separator 'utf-8)
   (spaceline-spacemacs-theme))
 
+;; Make ace-window leading character face match buffer
+(custom-set-faces
+ '(aw-leading-char-face
+   ((t (:height 1.0)))))
+
 (provide 'jw-ui)
