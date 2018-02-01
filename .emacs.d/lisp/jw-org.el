@@ -58,8 +58,14 @@ If FILEXT is provided, return files with extension FILEXT instead."
                 (org-indent-mode 1)
                 (flyspell-mode)))))
 
+(use-package org-bullets
+ :ensure t
+ :init
+ (setq org-bullets-bullet-list
+       '("●" "●" "○" "○" "○" "►" "•"  "▸"))
+ :config
+ (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-;;(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'\\|[0-9]+")
 (setq org-capture-templates
       '(("t" "TODO" entry (file+headline "~/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n")
