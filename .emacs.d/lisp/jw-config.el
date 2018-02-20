@@ -19,18 +19,18 @@
   :ensure t
   :defer t
   :diminish smartparens-mode
-  :init (add-hook
-         'prog-mode-hook
-         (lambda ()
-           (require 'smartparens-config)
-           (show-smartparens-global-mode 1)
-           (smartparens-global-mode t))))
+  :init (let ((sp-hook (lambda ()
+                         (require 'smartparens-config)
+                         (show-smartparens-global-mode 1)
+                         (smartparens-global-mode t))))
+          (progn
+            (add-hook 'prog-mode-hook sp-hook)
+            (add-hook 'LaTeX-mode-hook sp-hook))))
 
 ;; Start-up Screen
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message
-      (concat "* Notes "
-              (format-time-string "%d/%m/%y")))
+      (concat "* Notes " (format-time-string "%d/%m/%y")))
 
 ;; Hippie Expand Preferences
 (setq hippie-expand-try-functions-list
@@ -64,8 +64,9 @@
 
 (use-package yasnippet
   :diminish yas-minor-mode
-  :ensure t
-  :init (add-hook 'prog-mode-hook #'yas-minor-mode)
-  :config (yas-reload-all))
+  :init
+  (yas-global-mode)
+  :config
+  (yas-reload-all))
 
 (provide 'jw-config)

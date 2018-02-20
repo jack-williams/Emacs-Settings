@@ -55,7 +55,9 @@
     (setq ivy-re-builders-alist
           '((t . ivy--regex-plus)))
     (setq ivy-initial-inputs-alist nil)
-    (global-set-key "\C-s" 'swiper)
+    (setq counsel-grep-base-command
+          "rg -i -M 120 --no-heading --line-number --color never '%s' %s")
+    (global-set-key "\C-s" 'counsel-grep-or-swiper)
     (global-set-key (kbd "C-c C-r") 'ivy-resume)
     (global-set-key (kbd "C-x C-m") 'counsel-M-x)
     (global-set-key (kbd "C-x C-f") 'counsel-find-file)
@@ -66,8 +68,9 @@
     (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
     (global-set-key (kbd "C-c g") 'counsel-git)
     (global-set-key (kbd "C-c j") 'counsel-git-grep)
-    (global-set-key (kbd "C-c k") 'counsel-ag)
+    (global-set-key (kbd "C-c k") 'counsel-rg)
     (global-set-key (kbd "C-x l") 'counsel-locate)
+    (global-set-key (kbd "M-y") 'counsel-yank-pop)
     (global-set-key (kbd "C-c w") 'ivy-push-view)
     (global-set-key (kbd "C-c W") 'ivy-pop-view)
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
