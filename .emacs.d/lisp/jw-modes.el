@@ -14,15 +14,13 @@
      (flycheck-mode +1)
      (setq flycheck-check-syntax-automatically '(save mode-enabled))
      (eldoc-mode +1)
-     (tide-hl-identifier-mode +1)
-     (company-mode +1)))
+     (tide-hl-identifier-mode +1)))
   (add-hook
    'before-save-hook
    'tide-format-before-save)
   :config
   (setq typescript-indent-level 4)
   (setq typescript-switch-indent-offset typescript-indent-level)
-  (setq company-tooltip-align-annotations t)
   (setq js-indent-level 4)
   (setq tide-tsserver-executable "~/Developer/TypeScript/built/local/tsserver.js"))
 
@@ -56,7 +54,7 @@
           '((t . ivy--regex-plus)))
     (setq ivy-initial-inputs-alist nil)
     (setq counsel-grep-base-command
-          "rg -i -M 120 --no-heading --line-number --color never '%s' %s")
+          "rg -i -M 120 --no-heading --line-number --color never %s %s")
     (global-set-key "\C-s" 'counsel-grep-or-swiper)
     (global-set-key (kbd "C-c C-r") 'ivy-resume)
     (global-set-key (kbd "C-x C-m") 'counsel-M-x)
