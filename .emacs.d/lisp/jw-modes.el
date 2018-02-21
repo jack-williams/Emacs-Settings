@@ -44,7 +44,10 @@
 (add-hook 'text-mode-hook 'my-random-text-hook)
 
 (use-package ivy
+  :ensure t
   :diminish ivy-mode
+  :init
+  (ivy-mode 1)
   :config
   (progn
     (ivy-mode)
