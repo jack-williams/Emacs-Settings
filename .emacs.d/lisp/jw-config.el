@@ -66,7 +66,9 @@
 (use-package git-gutter
   :ensure t
   :diminish git-gutter-mode
-  :init (global-git-gutter-mode t))
+  :init
+  (let ((git-gutter-hook (lambda () (git-gutter-mode 1))))
+    (add-hook 'prog-mode-hook git-gutter-hook)))
 
 (use-package yasnippet
   :diminish yas-minor-mode
