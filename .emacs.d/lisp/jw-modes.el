@@ -47,8 +47,7 @@
   :diminish ivy-mode
   :config
   (progn
-    (ivy-mode 1)
-    (setq ivy-use-virtual-buffers t)
+    (ivy-mode)
     (setq ivy-use-virtual-buffers t)
     (setq ivy-re-builders-alist
           '((t . ivy--regex-plus)))
