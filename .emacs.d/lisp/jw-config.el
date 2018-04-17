@@ -62,14 +62,6 @@
        'default-frame-alist
        '(font . "-outline-Consolas-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))))
 
-;; Git
-(use-package git-gutter
-  :ensure t
-  :diminish git-gutter-mode
-  :init
-  (let ((git-gutter-hook (lambda () (git-gutter-mode 1))))
-    (add-hook 'prog-mode-hook git-gutter-hook)))
-
 (use-package yasnippet
   :diminish yas-minor-mode
   :init
