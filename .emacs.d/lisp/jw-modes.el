@@ -15,9 +15,6 @@
      (setq flycheck-check-syntax-automatically '(save mode-enabled))
      (eldoc-mode +1)
      (tide-hl-identifier-mode +1)))
-  (add-hook
-   'before-save-hook
-   'tide-format-before-save)
   :config
   (setq typescript-indent-level 4)
   (setq typescript-switch-indent-offset typescript-indent-level)
