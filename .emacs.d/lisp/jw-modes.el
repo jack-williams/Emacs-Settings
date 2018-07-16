@@ -14,7 +14,10 @@
      (flycheck-mode +1)
      (setq flycheck-check-syntax-automatically '(save mode-enabled))
      (eldoc-mode +1)
-     (tide-hl-identifier-mode +1)))
+     (tide-hl-identifier-mode +1)
+     (define-key tide-mode-map (kbd "C-c f") #'tide-jsdoc-template)
+     (define-key tide-mode-map (kbd "C-c C-f") #'tide-format)
+     ))
   :config
   (setq typescript-indent-level 4)
   (setq typescript-switch-indent-offset typescript-indent-level)
