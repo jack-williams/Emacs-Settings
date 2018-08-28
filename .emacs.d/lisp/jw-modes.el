@@ -28,6 +28,7 @@
   :mode "\\.hs\\'"
   :config
   (setq haskell-process-type 'stack-ghci)
+  (setq haskell-process-args-stack-ghci '("--ghci-options=-ferror-spans -fshow-loaded-modules"))
   (defun my-haskell-hook ()
     (progn
       (interactive-haskell-mode)
@@ -77,6 +78,9 @@
     ))
 
 ;; LaTeX Config
+(setq-default TeX-master nil)
+(setq TeX-parse-self t) ; Enable parse on load.
+(setq TeX-auto-save t) ; Enable parse on save.
 (setq reftex-plug-into-AUCTeX t)
 (setq TeX-view-program-selection '((output-pdf "Skim")))
 (setq TeX-view-program-list
