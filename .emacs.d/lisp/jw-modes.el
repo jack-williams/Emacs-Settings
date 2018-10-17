@@ -90,6 +90,7 @@
           (lambda ()
             (progn
               (reftex-mode t)
+              (flyspell-mode t)
               (push
                '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
                  :help "Run latexmk on file")
