@@ -10,9 +10,6 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-;; Add this since I've hidden menu bar on OSX
-(display-time-mode t)
-
 (use-package spacemacs-theme
   :defer t
   :init
