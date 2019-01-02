@@ -90,6 +90,7 @@
           (lambda ()
             (progn
               (reftex-mode t)
+              (setq reftex-cite-format 'natbib)
               (flyspell-mode t)
               (push
                '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
