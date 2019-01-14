@@ -21,11 +21,14 @@
   :ensure t
   :defer t
   :hook
-  (after-init . (lambda ()
-                  (setq doom-modeline-height 20)
-                  (setq doom-modeline-bar-width 4)
-                  (setq doom-modeline-icon (not (eq system-type 'windows-nt)))
-                  (doom-modeline-init))))
+  (after-init
+   . (lambda ()
+       (setq doom-modeline-height 20)
+       (setq doom-modeline-bar-width 4)
+       (setq doom-modeline-icon (not (eq system-type 'windows-nt)))
+       (setq doom-modeline-icon nil)
+       (setq doom-modeline-major-mode-icon nil)
+       (doom-modeline-init))))
 
 ;; (use-package spaceline
 ;;   :demand t
