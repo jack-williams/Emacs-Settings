@@ -30,13 +30,6 @@
        (setq doom-modeline-major-mode-icon nil)
        (doom-modeline-init))))
 
-;; (use-package spaceline
-;;   :demand t
-;;   :config
-;;   (require 'spaceline-config)
-;;   (setq powerline-default-separator 'utf-8)
-;;   (spaceline-spacemacs-theme))
-
 ;; Make ace-window leading character face match buffer
 (custom-set-faces
  '(aw-leading-char-face

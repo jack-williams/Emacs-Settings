@@ -4,6 +4,10 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(use-package markdown-mode
+  :mode "\\.md\\'"
+  )
+
 (use-package typescript-mode
   :mode "\\.ts\\'"
   :init
